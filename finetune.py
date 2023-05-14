@@ -280,4 +280,5 @@ def train(
 
 
 if __name__ == "__main__":
-    fire.Fire(train)
+    with torch.autocast("cuda"):
+        fire.Fire(train)
